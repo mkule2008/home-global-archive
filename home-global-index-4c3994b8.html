@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开云 · 稳定入口与页面说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: #fcfcfc;
+            color: #1e1e1e;
+            line-height: 1.7;
+            padding: 2rem 1.2rem;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        /* 顶部导航 */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0 2rem 0;
+            border-bottom: 1px solid #eaeaea;
+            margin-bottom: 2.8rem;
+        }
+
+        .nav-brand {
+            font-weight: 500;
+            font-size: 1.2rem;
+            letter-spacing: 0.02em;
+            color: #2c3e50;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #3a5a6f;
+            transition: color 0.15s;
+        }
+
+        .nav-links a:hover {
+            color: #1b3b4f;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        /* hero */
+        .hero {
+            margin-bottom: 3.2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 550;
+            letter-spacing: -0.01em;
+            line-height: 1.25;
+            margin-bottom: 0.8rem;
+            color: #1d2b36;
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            color: #3f4f5c;
+            max-width: 600px;
+        }
+
+        /* 核心介绍 */
+        .intro {
+            margin-bottom: 2.8rem;
+            background: #f4f7fa;
+            padding: 1.8rem 2rem;
+            border-radius: 12px;
+        }
+
+        .intro h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+            color: #1d2b36;
+        }
+
+        .intro p {
+            color: #2f3f4b;
+            margin-bottom: 0.6rem;
+        }
+
+        .intro p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 场景卡片 (三个模块) */
+        .scenes {
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+            margin-bottom: 3rem;
+        }
+
+        .scene-card {
+            border: 1px solid #e8edf0;
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 1.6rem 1.8rem;
+            transition: box-shadow 0.2s;
+        }
+
+        .scene-card:hover {
+            box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+        }
+
+        .scene-card h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #1d2b36;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .scene-card p {
+            color: #3f4f5c;
+            font-size: 0.95rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .scene-card .meta {
+            font-size: 0.82rem;
+            color: #6f7e8a;
+            margin-top: 0.6rem;
+        }
+
+        /* 常见说明 (FAQ 摘要) */
+        .faq-section {
+            margin-bottom: 3rem;
+        }
+
+        .faq-section h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 1.2rem;
+            color: #1d2b36;
+        }
+
+        .faq-item {
+            padding: 0.9rem 0;
+            border-bottom: 1px solid #eaeef2;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-item .question {
+            font-weight: 500;
+            color: #1d2b36;
+            margin-bottom: 0.25rem;
+        }
+
+        .faq-item .answer {
+            font-size: 0.92rem;
+            color: #4a5b67;
+        }
+
+        /* 内联链接样式 */
+        a {
+            color: #1d5b7a;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+            transition: color 0.15s;
+        }
+
+        a:hover {
+            color: #0b3a4f;
+            text-decoration-thickness: 2px;
+        }
+
+        /* 页脚 */
+        footer {
+            border-top: 1px solid #eaeaea;
+            padding-top: 1.8rem;
+            margin-top: 1.2rem;
+            font-size: 0.85rem;
+            color: #6b7b87;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+
+        footer a {
+            color: #3f5f72;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            body {
+                padding: 1.2rem 0.9rem;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.8rem;
+                padding-bottom: 1.5rem;
+                margin-bottom: 2rem;
+            }
+
+            .nav-links {
+                gap: 1.2rem;
+                flex-wrap: wrap;
+            }
+
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+
+            .intro {
+                padding: 1.3rem 1.2rem;
+            }
+
+            .scene-card {
+                padding: 1.2rem;
+            }
+        }
+
+        @media (min-width: 900px) {
+            .container {
+                max-width: 740px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 顶部导航 -->
+        <nav>
+            <span class="nav-brand">开云·指南</span>
+            <div class="nav-links">
+                <a href="#intro">介绍</a>
+                <a href="#scenes">场景</a>
+                <a href="#faq">说明</a>
+            </div>
+        </nav>
+
+        <!-- hero -->
+        <div class="hero">
+            <h1>稳定入口 &amp; 页面说明</h1>
+            <p>无论使用场景如何变化，保持一个可靠、清晰的信息起点始终重要。以下围绕<strong>开云</strong>的核心逻辑与常见疑问展开梳理。</p>
+        </div>
+
+        <!-- 核心介绍 (id="intro") -->
+        <div class="intro" id="intro">
+            <h2>从稳定入口谈起</h2>
+            <p>对于许多线上服务与信息页面而言，“入口的稳定性”直接影响后续操作的流畅度。所谓稳定入口，指链接结构长期不变、页面内容可预期、跳转逻辑直接。</p>
+            <p>本次介绍的对象——<a href="https://home-global-kai-yun.com">开云</a>，正是基于上述理念设计的页面集合。它不依赖临时参数，也不以重定向作为主要路径，而是提供一组可长期引用的地址，方便使用者按需查阅。</p>
+            <p>下文从三个常见场景切入，并附上若干常见说明，帮助你快速理解其结构与边界。</p>
+        </div>
+
+        <!-- 三个场景模块 (id="scenes") -->
+        <div class="scenes" id="scenes">
+            <div class="scene-card">
+                <h3>① 信息查阅 · 静态页面</h3>
+                <p>大部分内容以静态页面形式组织，更新频率较低，适合作为长期参考。不涉及实时交互，仅提供说明与引导。</p>
+                <div class="meta">适用场景：文档阅读、规则了解、背景核实</div>
+            </div>
+            <div class="scene-card">
+                <h3>② 功能入口 · 路径跳转</h3>
+                <p>在部分页面中，<a href="https://home-global-kai-yun.com">开云</a>作为跳转起点，指向更具体的功能界面。跳转前通常附有简短说明，帮助使用者判断下一步操作。</p>
+                <div class="meta">适用场景：功能导航、模块切换、服务引导</div>
+            </div>
+            <div class="scene-card">
+                <h3>③ 内容聚合 · 索引页</h3>
+                <p>索引页汇总了多个相关子页面的链接和简介，形成一份可浏览的清单。索引本身不包含深层内容，仅提供概览与快速定位。</p>
+                <div class="meta">适用场景：资料汇总、目录式浏览、结构预览</div>
+            </div>
+        </div>
+
+        <!-- 常见说明 (FAQ 摘要, id="faq") -->
+        <div class="faq-section" id="faq">
+            <h2>常见说明</h2>
+            <div class="faq-item">
+                <div class="question">页面是否长期可用？</div>
+                <div class="answer">主要页面地址保持稳定，不设临时过期策略。如遇结构调整，会在页面内提前标注说明。</div>
+            </div>
+            <div class="faq-item">
+                <div class="question">是否需要注册或登录？</div>
+                <div class="answer">信息查阅类页面无需任何身份验证。部分功能入口可能要求身份校验，具体以跳转后的页面提示为准。</div>
+            </div>
+            <div class="faq-item">
+                <div class="question">内容更新频率如何？</div>
+                <div class="answer">索引与说明类内容按需更新，无固定周期。重大变更会体现在页面版本标识中。</div>
+            </div>
+            <div class="faq-item">
+                <div class="question">如何反馈问题或建议？</div>
+                <div class="answer">当前页面暂无独立反馈通道。建议通过相关服务渠道或内部联络方式沟通。关于 <a href="https://home-global-kai-yun.com">开云</a> 本身的疑问，可参考页面内的补充说明。</div>
+            </div>
+        </div>
+
+        <!-- 页脚 -->
+        <footer>
+            <span>© 2025 · 开云页面说明</span>
+            <span>稳定入口 | <a href="https://home-global-kai-yun.com">开云</a></span>
+        </footer>
+    </div>
+</body>
+</html>
