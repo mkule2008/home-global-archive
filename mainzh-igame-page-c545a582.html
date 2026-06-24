@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱游戏 · 入门与提醒</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', sans-serif;
+      background: #f7f9fc;
+      color: #1e2a36;
+      line-height: 1.7;
+    }
+
+    /* 深色头图 */
+    .hero {
+      background: linear-gradient(135deg, #0b1a2a 0%, #1c2e42 100%);
+      color: #e8edf2;
+      padding: 4rem 2rem 3.5rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero .tagline {
+      font-size: 1.15rem;
+      color: #b2c9db;
+      max-width: 620px;
+      margin: 0 auto;
+      border-top: 1px solid #3b536a;
+      padding-top: 1rem;
+    }
+
+    /* 浅色正文区 */
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2.8rem 1.5rem 4rem;
+    }
+
+    section {
+      margin-bottom: 2.8rem;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      font-weight: 550;
+      margin-bottom: 1.2rem;
+      color: #132736;
+      border-left: 5px solid #2b6c9e;
+      padding-left: 1rem;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+    }
+
+    /* 特点列表 —— 卡片式 */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 0.8rem;
+    }
+
+    .feature-card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.6rem 1.4rem;
+      box-shadow: 0 4px 14px rgba(0, 20, 30, 0.04);
+      transition: transform 0.15s ease, box-shadow 0.2s;
+      border: 1px solid #e5edf5;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0, 30, 50, 0.08);
+    }
+
+    .feature-card h3 {
+      font-size: 1.2rem;
+      font-weight: 530;
+      margin-bottom: 0.5rem;
+      color: #1a3b4f;
+    }
+
+    .feature-card p {
+      font-size: 0.95rem;
+      color: #2f4357;
+      margin-bottom: 0;
+    }
+
+    /* 提示 / 引用块 */
+    .note-box {
+      background: #e7f0f9;
+      border-left: 6px solid #2b6c9e;
+      padding: 1.2rem 1.6rem;
+      border-radius: 0 16px 16px 0;
+      margin: 1.8rem 0;
+    }
+
+    .note-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 链接强调色 */
+    a {
+      color: #1d6fa5;
+      text-decoration: none;
+      border-bottom: 1px dotted #98bbd9;
+      transition: color 0.15s, border-bottom-color 0.15s;
+    }
+
+    a:hover {
+      color: #094a77;
+      border-bottom-color: #094a77;
+    }
+
+    /* FAQ 摘要 */
+    .faq-item {
+      margin-bottom: 1rem;
+    }
+
+    .faq-question {
+      font-weight: 550;
+      margin-bottom: 0.15rem;
+      color: #0b2a3b;
+    }
+
+    .faq-answer {
+      color: #31485c;
+      padding-left: 1.2rem;
+      border-left: 3px solid #d4e2ef;
+    }
+
+    /* 温和结尾 */
+    .gentle-footer {
+      text-align: center;
+      padding: 2.8rem 0 1rem;
+      border-top: 1px solid #dbe5ef;
+      margin-top: 1rem;
+    }
+
+    .gentle-footer p {
+      color: #3d5b72;
+      font-size: 0.95rem;
+    }
+
+    /* 响应式 */
+    @media (max-width: 640px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero {
+        padding: 3rem 1.2rem 2.5rem;
+      }
+      .container {
+        padding: 1.8rem 1rem 3rem;
+      }
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+      h2 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 深色头图：开场短句 -->
+  <header class="hero">
+    <h1>爱游戏 · 简明向导</h1>
+    <p class="tagline">一份关于使用、浏览与访问节奏的认真整理</p>
+  </header>
+
+  <div class="container">
+
+    <!-- 承接段落：从简明指南和访问提醒切入 -->
+    <section>
+      <p>
+        使用任何线上服务之前，先花一分钟了解它的基本面貌，总不是多余的事。下面这份说明围绕 <a href="https://mainzh-igame.com">爱游戏</a> 整理，不夸大，不渲染，只把关键点写清楚，方便你判断是否契合自己的期待。
+      </p>
+      <p>
+        同时也附上几条访问时的实用提醒 —— 有些细节能让你浏览起来更顺畅，避免不必要的麻烦。
+      </p>
+    </section>
+
+    <!-- 特点列表：卡片形式 -->
+    <section>
+      <h2>几个值得注意的特点</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>界面简洁，侧重内容</h3>
+          <p>没有过度设计，分类清晰，主要信息在首页就能得到概览，适合快速判断。</p>
+        </div>
+        <div class="feature-card">
+          <h3>更新频率稳定</h3>
+          <p>内容维护有节奏，不会长期沉寂，也不至于频繁推送造成干扰。</p>
+        </div>
+        <div class="feature-card">
+          <h3>无诱导弹窗</h3>
+          <p>页面不设置强制关注或下载弹窗，浏览自由度较高，可以安静地阅读。</p>
+        </div>
+        <div class="feature-card">
+          <h3>链接跳转清晰</h3>
+          <p>所有可点击的链接都有明确标识，不会在文字中隐藏难以预料的跳转。</p>
+        </div>
+        <div class="feature-card">
+          <h3>适合各端阅读</h3>
+          <p>无论是手机还是桌面浏览器，排版均能自适应，段落间距舒适。</p>
+        </div>
+        <div class="feature-card">
+          <h3>无注册门槛</h3>
+          <p>浏览大部分内容无需登录或注册账号，减少信息获取的摩擦。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 提示块：访问提醒 -->
+    <section>
+      <h2>访问前的小提醒</h2>
+      <div class="note-box">
+        <p>◈ 使用最新版浏览器可获得最佳显示效果，部分旧浏览器可能对版式支持不完全。</p>
+        <p>◈ 若页面加载稍慢，请稍候片刻 —— 网站未使用大型资源，通常片刻即可完成。</p>
+        <p>◈ 建议通过<strong> <a href="https://mainzh-igame.com">爱游戏</a> </strong>直接进入，避免通过第三方镜像或转载页面，以保证内容准确、安全。</p>
+        <p>◈ 若遇到无法访问或异常跳转，请检查网络环境或域名是否正确，谨防仿冒站点。</p>
+      </div>
+    </section>
+
+    <!-- FAQ 摘要（非完整FAQ，只是常见两三条） -->
+    <section>
+      <h2>常见疑问摘要</h2>
+      <div class="faq-item">
+        <div class="faq-question">这个网站主要提供什么？</div>
+        <div class="faq-answer">围绕游戏话题的资讯和内容整理，不涉及下载、充值或交易类服务。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">需要安装插件或软件吗？</div>
+        <div class="faq-answer">不需要。所有内容通过浏览器访问即可，不推荐额外安装任何第三方工具。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">访问时需要注意什么？</div>
+        <div class="faq-answer">留意域名是否为 mainzh-igame.com，其余提示请参考上方的“访问前的小提醒”。</div>
+      </div>
+    </section>
+
+    <!-- 温和结尾 -->
+    <div class="gentle-footer">
+      <p>希望这份说明对你有所帮助。慢慢浏览，保持自己的节奏。</p>
+      <p style="margin-top: 0.5rem; font-size: 0.85rem;">—— 整理于日常</p>
+    </div>
+
+  </div>
+
+</body>
+</html>
