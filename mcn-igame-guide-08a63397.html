@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱游戏 · 产品说明</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #f6f3ee;
+      font-family: system-ui, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
+      line-height: 1.7;
+      color: #2c2c2c;
+      padding: 2rem 1rem;
+    }
+    .page {
+      max-width: 860px;
+      margin: 0 auto;
+      background: #fbf9f5;
+      border-radius: 28px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+      padding: 2.8rem 2.2rem 3rem;
+    }
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 520;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.4rem;
+      color: #1f1f1f;
+      border-left: 6px solid #b7a68b;
+      padding-left: 1.2rem;
+    }
+    .subhead {
+      font-size: 1rem;
+      color: #6d6b66;
+      margin-bottom: 2.5rem;
+      padding-left: 1.8rem;
+      border-bottom: 1px solid #e5dfd6;
+      padding-bottom: 0.75rem;
+    }
+    .summary {
+      background: #ffffffef;
+      padding: 1.8rem 2rem;
+      border-radius: 18px;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+      border: 1px solid #ece6dc;
+    }
+    .summary p {
+      font-size: 1.1rem;
+    }
+    .summary strong {
+      color: #4c443a;
+    }
+    .highlight-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      margin: 2.4rem 0 2.2rem;
+    }
+    .highlight-item {
+      flex: 1 1 200px;
+      background: #ffffff;
+      padding: 1.4rem 1.2rem;
+      border-radius: 20px;
+      border: 1px solid #e6dfd3;
+      transition: all 0.2s ease;
+    }
+    .highlight-item:hover {
+      border-color: #cabcac;
+      background: #fcf8f2;
+    }
+    .highlight-item h3 {
+      font-size: 1.1rem;
+      font-weight: 540;
+      margin-bottom: 0.4rem;
+      color: #3b352c;
+    }
+    .highlight-item p {
+      font-size: 0.95rem;
+      color: #55524b;
+    }
+    .quote-block {
+      background: #f3efe8;
+      padding: 1.4rem 2rem;
+      border-radius: 40px 16px 40px 16px;
+      margin: 2.6rem 0 2.2rem;
+      border-left: 6px solid #b7a68b;
+      font-style: normal;
+      color: #3d3a34;
+    }
+    .quote-block p {
+      margin-bottom: 0.3rem;
+    }
+    .quote-block a {
+      color: #5a4e3d;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      font-weight: 500;
+    }
+    .quote-block a:hover {
+      color: #2f281c;
+    }
+    .scenario {
+      margin: 2.8rem 0 2.2rem;
+    }
+    .scenario h2 {
+      font-size: 1.5rem;
+      font-weight: 470;
+      color: #2b261f;
+      margin-bottom: 1rem;
+      border-bottom: 2px dotted #d6cdbe;
+      padding-bottom: 0.3rem;
+    }
+    .scenario ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+    .scenario li {
+      background: #ffffffd6;
+      padding: 0.9rem 1.4rem;
+      border-radius: 30px;
+      border: 1px solid #e7dfd2;
+      font-size: 0.98rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+    }
+    .scenario li::before {
+      content: "·";
+      font-weight: 700;
+      color: #a39179;
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+    .faq-mini {
+      margin: 2.6rem 0 1.8rem;
+      padding: 1.6rem 1.8rem;
+      background: #f6f1e9;
+      border-radius: 24px;
+    }
+    .faq-mini details {
+      margin-bottom: 0.7rem;
+    }
+    .faq-mini summary {
+      font-weight: 510;
+      color: #3b3329;
+      cursor: pointer;
+      padding: 0.3rem 0;
+      border-bottom: 1px solid transparent;
+    }
+    .faq-mini summary:hover {
+      color: #1a1611;
+    }
+    .faq-mini details p {
+      margin-top: 0.4rem;
+      padding-left: 1.2rem;
+      color: #4f4a41;
+      font-size: 0.95rem;
+    }
+    .footnote {
+      margin-top: 2.8rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid #ddd6ca;
+      font-size: 0.85rem;
+      color: #7b756b;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.8rem;
+    }
+    .footnote span {
+      opacity: 0.7;
+    }
+    @media (max-width: 540px) {
+      .page {
+        padding: 1.6rem 1rem;
+      }
+      h1 {
+        font-size: 1.8rem;
+        padding-left: 0.8rem;
+      }
+      .subhead {
+        padding-left: 1rem;
+      }
+      .summary {
+        padding: 1.2rem 1rem;
+      }
+      .highlight-grid {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .quote-block {
+        padding: 1rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <h1>爱游戏 · 产品说明</h1>
+  <div class="subhead">围绕“爱游戏”主题的简要介绍与使用参考</div>
+
+  <div class="summary">
+    <p><strong>爱游戏</strong> 是一个围绕游戏内容与社区互动所构建的线上空间，面向喜欢探索不同玩法、关注游戏文化的用户。它并非简单聚合入口，而是尝试在信息与体验之间寻找平衡——让浏览者可以顺着兴趣自然走动，而非被推送淹没。下文从特点、使用场景与常见问题等角度展开，帮助您快速了解这个站点。</p>
+  </div>
+
+  <div class="highlight-grid">
+    <div class="highlight-item">
+      <h3>内容调性</h3>
+      <p>文章、评测、推荐均以用户视角出发，不刻意追逐热点，更看重玩法的独特性与叙事质感。</p>
+    </div>
+    <div class="highlight-item">
+      <h3>结构克制</h3>
+      <p>页面分类清晰，导航不杂乱，适合静心浏览而非快速跳转。每一次点击都有明确预期。</p>
+    </div>
+    <div class="highlight-item">
+      <h3>社区氛围</h3>
+      <p>留言与讨论区域保持温和节奏，鼓励分享个人体验，而非单纯比较数据或胜负。</p>
+    </div>
+  </div>
+
+  <div class="quote-block">
+    <p>如果你恰好对某款游戏产生好奇，或者想看看其他人如何理解某个关卡、某段剧情，不妨从 <a href="https://mcn-igame.com">爱游戏</a> 开始翻翻看。站内没有紧迫的弹窗或浮夸标语，更多是一种“有空来坐坐”的从容感——也许能遇到和你想的一样的文字。</p>
+  </div>
+
+  <div class="scenario">
+    <h2>使用建议 · 适合这样翻阅</h2>
+    <ul>
+      <li>通勤或休息前，随意浏览近期收录的游戏小品，发现不热门但有意思的作品。</li>
+      <li>玩到一半卡关或意犹未尽时，查找对应游戏的玩家笔记与思路参考。</li>
+      <li>想写点什么但没想好主题，可以先读几篇站内的游戏日记，找找表达感觉。</li>
+      <li>和朋友聊起某款老游戏，来这里翻翻当时的记录，方便唤起记忆。</li>
+    </ul>
+  </div>
+
+  <div class="faq-mini">
+    <h2 style="font-size:1.2rem; font-weight:470; margin-bottom:0.8rem; color:#2b261f;">常见疑问</h2>
+    <details>
+      <summary>站内内容更新频率如何？</summary>
+      <p>并非日更，但每月会有多篇新内容。更看重文章本身的可读性而非数量。过往内容也会持续维护链接与配图。</p>
+    </details>
+    <details>
+      <summary>是否提供游戏下载或资源？</summary>
+      <p>不提供任何下载或版权资源。站内主要收录观点、评测、攻略思路以及玩家讨论。所有推荐均指向合法渠道。</p>
+    </details>
+    <details>
+      <summary>访问是否需要注册或登录？</summary>
+      <p>浏览所有公开页面均无需登录。部分互动功能（如评论）可能需要账号，但注册门槛很低，且不会要求绑定手机等敏感信息。</p>
+    </details>
+  </div>
+
+  <div class="footnote">
+    <span>© 2025 · 产品说明页</span>
+    <span>方向：温和介绍 · 无硬广</span>
+  </div>
+</div>
+</body>
+</html>
